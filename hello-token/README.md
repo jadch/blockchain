@@ -1,3 +1,20 @@
+- After launching `anvil`, add the `DEPLOYER_PRIVATE_KEY` and `OWNER_ADDRESS` to the `.env`
+file then launch ` make deploy-anvil`
+
+You can then start interacting with the contract with the following commands:
+- start with `export TOKEN=<deployed address>`
+
+### Read balance
+`cast call $TOKEN "balanceOf(address)(uint256)" $ADDR`
+### Mint (owner only)
+`cast send $TOKEN "mint(address,uint256)" $ADDR 100e18 --private-key $PK`
+### Get token total balance
+`cast call $TOKEN "totalSupply()" | xargs cast --to-dec`
+### Transfer to another anvil account
+`cast send $TOKEN "transfer(address,uint256)" <ADDRESS_TO_SEND_TO> 25e18 --private-key $PK`
+
+
+
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
