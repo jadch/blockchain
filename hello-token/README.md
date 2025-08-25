@@ -12,6 +12,8 @@ You can then start interacting with the contract with the following commands:
 `cast call $TOKEN "totalSupply()" | xargs cast --to-dec`
 ### Transfer to another anvil account
 `cast send $TOKEN "transfer(address,uint256)" <ADDRESS_TO_SEND_TO> 25e18 --private-key $PK`
+### Claim from faucet
+`cast send $FAUCET_ADDRESS "claim()" --private-key <PRIVATE_KEY_OF_ACCOUNT>`
 
 
 
