@@ -1,5 +1,7 @@
 {
     "solidity.remappings": [
         "@openzeppelin/=lib/openzeppelin-contracts/contracts/"
-    ]
+    ],
+    "git.scanRepositories": ["**/lib/**"],
+    "scm.alwaysShowRepositories": false
 }
