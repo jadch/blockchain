@@ -1,4 +1,4 @@
-.PHONY: deploy-anvil deploy-local deploy-sepolia deploy-mainnet help
+.PHONY: deploy-anvil deploy-sepolia
 
 # Default target
 help:
@@ -9,6 +9,8 @@ help:
 	@echo "  DEPLOYER_PRIVATE_KEY - Your wallet's private key"
 	@echo "  OWNER_ADDRESS       - The address that will own the token"
 
-# Deploy to local Anvil node
 deploy-anvil:
 	forge script script/Deploy.s.sol --rpc-url http://127.0.0.1:8545 --broadcast
+
+deploy-sepolia:
+	forge script script/Deploy.s.sol --rpc-url ${SEPOLIA_RPC_URL} --broadcast
