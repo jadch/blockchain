@@ -1,3 +1,4 @@
+## Local Testing
 - After launching `anvil`, add the `DEPLOYER_PRIVATE_KEY` and `OWNER_ADDRESS` to the `.env`
 file then launch ` make deploy-anvil`
 
@@ -15,6 +16,12 @@ You can then start interacting with the contract with the following commands:
 ### Claim from faucet
 `cast send $FAUCET_ADDRESS "claim()" --private-key <PRIVATE_KEY_OF_ACCOUNT>`
 
+## Sepolia Testing
+- `make deploy-sepolia`
+
+- Note the deployed addresses, you can then check them on etherscan:
+  	- TestToken deployed at: 0xa9FB8dF995eBF8849c977f3Af386cbFc09Cb7252 => https://sepolia.etherscan.io/address/0xa9fb8df995ebf8849c977f3af386cbfc09cb7252
+  	- Faucet deployed at: 0x89aA7e7865734B233AC9765A4C72EebedAA1e81E => https://sepolia.etherscan.io/address/0x89aa7e7865734b233ac9765a4c72eebedaa1e81e
 
 
 ## Foundry
